@@ -16,6 +16,7 @@ def add_user(phone_book, user_data):
 def delete_by_lastname(phone_book, last_name):
     for record in phone_book:
         if record['Фамилия'] == last_name:
+            phone_book.remove(record)
             write_txt('phon.txt',phone_book)
             return "Запись удалена."
     return "Запись с такой фамилией не найдена."
