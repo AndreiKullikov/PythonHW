@@ -121,7 +121,8 @@ def print_result():
     file1 = open('phon.txt', 'r', encoding='utf-8')
     lines = file1.readlines()
     for line in lines:
-        print(line.strip())
+        if not line.isspace():
+            print(line.strip())
     file1.close
 
 
